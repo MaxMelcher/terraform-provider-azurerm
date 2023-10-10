@@ -46,9 +46,9 @@ func importVirtualMachine(osType compute.OperatingSystemTypes, resourceType stri
 		}
 
 		// we don't support VM's without an OS Profile / attach
-		if vm.VirtualMachineProperties.OsProfile == nil {
-			return []*pluginsdk.ResourceData{}, fmt.Errorf("The %q resource doesn't support attaching OS Disks - please use the `azurerm_virtual_machine` resource instead", resourceType)
-		}
+		//if vm.VirtualMachineProperties.OsProfile == nil {
+		//	return []*pluginsdk.ResourceData{}, fmt.Errorf("The %q resource doesn't support attaching OS Disks - please use the `azurerm_virtual_machine` resource instead", resourceType)
+		//}
 
 		hasSshKeys := false
 		if osType == compute.OperatingSystemTypesLinux {
